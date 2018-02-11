@@ -3,7 +3,14 @@
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ListViewModelTest.ListContainPage"
+             xmlns:local="clr-namespace:ListViewModelTest"
              x:Name="rootElement">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:IntToBoolConverter x:Key="intToBool"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <ContentPage.Content>
         <StackLayout>
             <Label Text="{Binding Title}"
@@ -16,6 +23,8 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <Button Text="Submit" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" IsEnabled="{Binding Path=entry2, Converter={StaticResource intToBool},
+                ConverterParameter=255}}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

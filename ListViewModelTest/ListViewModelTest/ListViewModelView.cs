@@ -22,6 +22,12 @@ namespace ListViewModelTest
             }
         }
 
+        public int entry2
+        {
+            get;
+            set;
+        }
+
         public ListViewModelView(string title) 
         {
             Title = title;

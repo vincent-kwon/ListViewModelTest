@@ -27,6 +27,7 @@ namespace ListViewModelTest
             set;
         }
     }
+
     [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ListContainPage : ContentPage
 	{
@@ -53,6 +54,7 @@ namespace ListViewModelTest
             //ViewModel = lvl;
             BindingContext = lvl;
             lvl.Title = "This is it !!!!!!!!!!!!!!!";
+            lvl.entry2 = 1;
         }
 	}
 }

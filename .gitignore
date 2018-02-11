@@ -1,0 +1,9 @@
+﻿################################################################################
+# 이 .gitignore 파일은 Microsoft(R) Visual Studio에서 자동으로 만들어졌습니다.
+################################################################################
+
+/.vs/ListViewModelTest/v15
+/ListViewModelTest/ListViewModelTest/obj
+/ListViewModelTest/ListViewModelTest/bin/Debug/netstandard2.0
+/ListViewModelTest/ListViewModelTest.Tizen/obj
+/ListViewModelTest/ListViewModelTest.Tizen/bin/Debug/tizen40

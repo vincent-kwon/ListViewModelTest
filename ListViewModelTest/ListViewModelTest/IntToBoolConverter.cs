@@ -1,0 +1,32 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Text;
+using Xamarin.Forms;
+
+namespace ListViewModelTest
+{
+    public class IntToBoolConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            if (parameter == null) return false;
+            else
+            {
+                switch (parameter)
+                {
+                    case 100: return false;
+                        break;
+                    default: return true;
+                        break;
+                }
+            }
+            //return (int)value != 0;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return (bool)value ? 1 : 0;
+        }
+    }
+}
